@@ -4,7 +4,7 @@
 #         self.val = x
 #         self.next = None
 
-/***************     Methon 1 ******************/
+#/***************     Methon 1 ******************/
 
 
 class Solution(object):
@@ -24,4 +24,4 @@ class Solution(object):
         return None
         
         
-/***************     Methon 2 ******************/
+#/***************     Methon 2 ******************/
