@@ -22,3 +22,34 @@ public:
         return NULL;
     }
 };
+
+**************************** Method 2 ********************************
+class Solution {
+public:
+    ListNode *detectCycle(ListNode *head) {
+        ListNode *fast = head;
+        ListNode *slow = head;
+        ListNode *meet = NULL;
+        
+        while(fast){
+            fast = fast->next;
+            slow = slow->next;
+            if(!fast){
+                return NULL;
+            }
+            fast = fast->next;
+            if(fast == slow){
+                meet = fast;
+                break;
+            }
+        }
+        while(meet && head){
+            if(meet==head){
+                return head;
+            }
+            meet = meet->next;
+            head = head->next;
+        }
+        return NULL;
+    }
+};
