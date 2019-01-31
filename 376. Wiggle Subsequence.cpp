@@ -3,7 +3,7 @@
 class Solution {
 public:
     int wiggleMaxLength(vector<int>& nums) {
-        if(num.size() <2){
+        if(nums.size() <2){
             return nums.size();
         }
         static const int begin = 0;
@@ -20,7 +20,7 @@ public:
                         max_length++;
                     }
                     else if(nums[i-1] > nums[i]){
-                        state = down
+                        state = down;
                         max_length++;
                     }
                     break;
